@@ -54,4 +54,3 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/QinghuaSun1127/QinghuaSun.github.io/output/pacman-contribution-graph.svg">
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/QinghuaSun1127/QinghuaSun.github.io/output/pacman-contribution-graph.svg">
 </picture>
-###
