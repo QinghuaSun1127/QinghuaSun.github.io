@@ -1,186 +1,113 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Qinghua Sun - Portfolio</title>
-  <meta name="description" content="Qinghua Sun - Portfolio, Resume, Projects, and Contact Information" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Qinghua Sun — UC San Diego ECE master's student building AI agents, ML systems, and full-stack software. Seeking Summer 2027 internships.">
+  <meta name="theme-color" content="#f7f9fc">
+  <title>Qinghua Sun | AI & Software Engineering</title>
   <style>
-    :root {
-      --accent:#0a84ff; 
-      --bg:#f7f9fc; 
-      --card:#ffffff; 
-      --muted:#6b7280; 
-      font-family: Inter, "Segoe UI", Roboto, Arial;
-    }
-    body { margin:0; background:var(--bg); color:#0f1724; line-height:1.6; }
-    .container { max-width:950px; margin:40px auto; padding:24px; }
-    header { display:flex; gap:24px; align-items:center; }
-    .avatar { width:130px; height:130px; border-radius:12px; object-fit:cover; }
-    h1 { margin:0; font-size:2rem; }
-    .subtitle { margin-top:6px; color:var(--muted); white-space:pre-line; }
-    .card { background:var(--card); padding:22px; border-radius:16px; margin-top:24px; box-shadow:0 2px 10px rgba(0,0,0,0.06); }
-    h2 { margin-top:0; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:14px; }
-    .project { padding:16px; border-radius:12px; border:1px solid #eef2f6; background:linear-gradient(180deg, #fafcff, #ffffff); }
-    .project h3 { margin:0 0 8px 0; }
-    .project p { margin:0; color:var(--muted); font-size:0.96rem; }
-    .tag { display:inline-block; padding:6px 10px; background:#f1f5f9; border-radius:999px; font-size:0.8rem; margin-right:6px; margin-top:6px; }
-    .btn { display:inline-block; padding:10px 14px; border-radius:8px; background:var(--accent); color:white; text-decoration:none; margin-right:10px; font-size:.95rem; }
-    footer { margin-top:40px; text-align:center; color:var(--muted); font-size:.9rem; }
+    :root { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172235; background: #f7f9fc; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.55; }
+    a { color: #1558aa; }
+    a:hover { color: #0d3c75; }
+    .wrap { max-width: 980px; margin: auto; padding: 40px 22px 72px; }
+    .hero { display: flex; gap: 28px; align-items: center; }
+    .avatar { width: 112px; height: 112px; border-radius: 18px; object-fit: cover; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 8px; }
+    h2 { font-size: 1.3rem; margin: 0 0 18px; }
+    h3 { font-size: 1.05rem; margin: 0 0 7px; }
+    .subtitle { color: #48576a; margin: 0; }
+    .intro { max-width: 72ch; margin: 16px 0 0; }
+    .links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .button { display: inline-block; border: 1px solid #c9d5e3; background: #fff; border-radius: 9px; padding: 9px 14px; text-decoration: none; font-weight: 600; }
+    .button.primary { background: #1558aa; color: #fff; border-color: #1558aa; }
+    .button:focus-visible, a:focus-visible { outline: 3px solid #f6a23f; outline-offset: 3px; }
+    section { margin-top: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 15px; }
+    .card { background: #fff; border: 1px solid #e1e8f0; border-radius: 14px; padding: 20px; }
+    .card p { margin: 0 0 10px; color: #48576a; }
+    .card p:last-child { margin-bottom: 0; }
+    .meta { color: #637185; font-size: .92rem; }
+    .stack { font-size: .9rem; color: #52637a; }
+    .entry { border-top: 1px solid #dfe7ef; padding: 14px 0; }
+    .entry:first-of-type { border-top: 0; padding-top: 0; }
+    .entry-title { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-weight: 650; }
+    .entry p { margin: 5px 0 0; color: #48576a; }
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: #eaf1fa; border-radius: 999px; padding: 6px 10px; font-size: .88rem; }
+    footer { color: #637185; font-size: .9rem; margin-top: 52px; }
+    @media (max-width: 560px) { .wrap { padding-top: 26px; } .hero { align-items: flex-start; gap: 16px; } .avatar { width: 76px; height: 76px; } }
   </style>
 </head>
-
 <body>
-  <div class="container">
-
-    <!-- Header / Profile -->
-    <header>
-      <img class="avatar" src="avatar.jpg" alt="Profile Photo" />
+  <main class="wrap">
+    <header class="hero">
+      <img class="avatar" src="avatar.jpg" alt="Qinghua Sun" width="112" height="112">
       <div>
         <h1>Qinghua Sun</h1>
-        <div class="subtitle">
-ECE Student | Signal & Image Processing  
-AI & Embedded Systems Developer  
-Interdisciplinary Background in Product + Algorithm Engineering
-        </div>
-        <div style="margin-top:12px;">
-          <a class="btn" href="resume.pdf" target="_blank">Download Resume (PDF)</a>
-        </div>
+        <p class="subtitle">M.S. Electrical &amp; Computer Engineering · UC San Diego · Expected Dec 2027</p>
+        <p class="subtitle">AI Agents · ML Systems · Software Engineering</p>
       </div>
     </header>
+    <p class="intro">I build AI agents, evaluation workflows, and full-stack applications. I am seeking Summer 2027 internships in the United States, especially in California.</p>
+    <nav class="links" aria-label="Profile links">
+      <a class="button primary" href="resume.pdf">Resume (PDF)</a>
+      <a class="button" href="https://github.com/QinghuaSun1127">GitHub</a>
+      <a class="button" href="https://www.linkedin.com/in/qinghua-sun-23618a392/">LinkedIn</a>
+      <a class="button" href="mailto:qis010@ucsd.edu">Email</a>
+    </nav>
 
-    <!-- One-sentence personal intro -->
-    <section class="card">
-      <h2>Personal Headline</h2>
-      <p style="font-size:1.05rem;">
-        Passionate about building intelligent systems at the intersection of embedded control, machine learning, and real-world applications.
-      </p>
-    </section>
-
-    <!-- About Me -->
-    <section class="card">
-      <h2>About Me</h2>
-      <p>
-I am an Electrical and Communication Engineering student with hands-on experience in signal processing, computer vision, embedded systems, and deep learning.  
-I have led multidisciplinary technical teams, developed real-world ML systems, and contributed to research spanning battery anomaly detection, autonomous vehicles, medical imaging, and AI-driven proctoring.  
-I enjoy transforming ideas into engineered systems — from STM32-based control platforms to data-driven predictive models.
-      </p>
-
-      <div style="margin-top:10px;">
-        <span class="tag">Signal Processing</span>
-        <span class="tag">Image Processing</span>
-        <span class="tag">Deep Learning</span>
-        <span class="tag">Embedded Systems</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Python</span>
-        <span class="tag">C</span>
-        <span class="tag">STM32</span>
-        <span class="tag">MATLAB</span>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="card">
-      <h2>Education</h2>
-      <p>
-        <strong>University of Electronic Science and Technology of China (UESTC)</strong><br>
-        B.Eng. in Communication Engineering (Joint Program with University of Glasgow)<br>
-        <em>GPA: 3.56/4.0 | 2021 – 2025</em>
-      </p>
-
-      <p>
-        <strong>University of California, San Diego (UCSD)</strong><br>
-        M.S. in Electrical and Computer Engineering (Signal & Image Processing Track)<br>
-        <em>2026 – 2027 (Planned)</em>
-      </p>
-    </section>
-
-    <!-- Projects -->
-    <section class="card">
-      <h2>Projects</h2>
-
+    <section aria-labelledby="projects">
+      <h2 id="projects">Selected projects</h2>
       <div class="grid">
-
-        <!-- Project 1 -->
-        <div class="project">
-          <h3>STM32 Smart Line-Patrolling Vehicle</h3>
-          <p>
-Developed a fully autonomous line-following vehicle using image processing.  
-Designed a 6-ROI visual tracking pipeline to extract lane edges and compute heading deviation for stable control.  
-Implemented HSV-based traffic-light detection and arrow-based path selection with >91% recognition accuracy.  
-Integrated ultrasonic obstacle detection, pedestrian recognition, and a PID-based closed-loop speed controller achieving ±3 cm tracking error.
-          </p>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project">
-          <h3>DAD: Deep Learning Framework for Battery Anomaly Detection</h3>
-          <p>
-Created an end-to-end EV battery anomaly detector using a 1D-CNN autoencoder trained solely on normal operation data.  
-Introduced a dynamic percentile-based thresholding method (95th–99th) to adapt to environmental and aging effects, reducing false alarms by 40%.  
-Evaluated the system on 347 EVs and 90,000+ charging cycles, surpassing LSTM-AD baselines in AUC, recall, and robustness.
-          </p>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project">
-          <h3>Ocean Salinity Prediction — GEARS Program (NCSU)</h3>
-          <p>
-Developed ML models (Random Forest, Linear Regression) to analyze ocean salinity trends.  
-Applied feature engineering on depth, coordinates, conductivity, and environmental variables.  
-Achieved 90% accuracy through proper normalization, regularization, and overfitting mitigation.
-          </p>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project">
-          <h3>COVID Chest X-ray Classification (NTU AI Internship)</h3>
-          <p>
-Implemented logistic regression and CNN-based pipelines for COVID image classification.  
-Enhanced dataset quality through denoising and augmentation.  
-Explored activation functions, hierarchical feature extraction, and self-attention mechanisms for improved accuracy and robustness.
-          </p>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project">
-          <h3>AI Proctoring System — Vision Model Training & Optimization</h3>
-          <p>
-Annotated and cleaned a 100,000+ image dataset of exam-room surveillance frames.  
-Improved abnormal-behavior detection (e.g., phone use, whispering) to >90% F1 score.  
-Optimized detection pipeline, enhanced robustness to lighting and occlusion, and redesigned backend system for scalability.
-          </p>
-        </div>
-
+        <article class="card">
+          <h3>AgentFlow Enterprise AI Agent Platform</h3>
+          <p>LangGraph orchestration with intent routing, document RAG, Redis memory, FastAPI endpoints, access control, and DLP filtering.</p>
+          <p class="stack">Python · LangGraph · FastAPI · PostgreSQL/pgvector · Redis · Docker</p>
+          <a href="https://github.com/QinghuaSun1127/agentflow-platform">Source code →</a>
+        </article>
+        <article class="card">
+          <h3>Tree Hole AI Companion</h3>
+          <p>Local-first memory protected with Web Crypto, plus an interactive emotion-responsive Pixi.js/WebGL interface.</p>
+          <p class="stack">JavaScript · Web Crypto API · Pixi.js · FastAPI</p>
+          <a href="https://github.com/QinghuaSun1127/Tree_house">Source code →</a> · <a href="https://www.treehouserly.asia/">Website →</a>
+        </article>
+        <article class="card">
+          <h3>AnnaWrite MVP</h3>
+          <p>AI writing workspace with draft generation, sentence-level rewrites, version restore, and document export.</p>
+          <p class="stack">React · TypeScript · Vite</p>
+          <a href="https://github.com/QinghuaSun1127/anna-write-mvp">Source code →</a>
+        </article>
+        <article class="card">
+          <h3>AnnaVisual Brand MVP</h3>
+          <p>Workflow that turns brand references into editable profiles and visual briefs while preserving fixed brand assets.</p>
+          <p class="stack">JavaScript · Python · Agent tools</p>
+          <a href="https://github.com/QinghuaSun1127/anna-visual-brand-mvp">Source code →</a>
+        </article>
       </div>
     </section>
 
-    <!-- Interests -->
-    <section class="card">
-      <h2>Interests</h2>
-      <p>
-Beyond engineering, I enjoy exploring robotics, reading about cognitive science, studying autonomous systems,  
-and diving into data-driven storytelling. I also like photography and outdoor running.
-      </p>
+    <section aria-labelledby="experience">
+      <h2 id="experience">Recent experience</h2>
+      <div class="entry"><div class="entry-title"><span>AIBuildAI · Research Contributor</span><span class="meta">Jul–Sep 2026</span></div><p>Evaluated an autonomous ML research pipeline on an NVIDIA A100 and investigated setup, timeout, and output-alignment failures.</p></div>
+      <div class="entry"><div class="entry-title"><span>ChainAI · AI Agent and Real-Time Systems Intern</span><span class="meta">Jun–Sep 2026</span></div><p>Built a voice-agent evaluation harness, reviewed agent failures, and contributed to streaming ASR and WebRTC prototypes.</p></div>
+      <div class="entry"><div class="entry-title"><span>Anna · App Development Intern</span><span class="meta">May–Jul 2026</span></div><p>Built React/TypeScript and Python MVP workflows for AI writing, brand visuals, and editable presentation components.</p></div>
+      <div class="entry"><div class="entry-title"><span>Feeling AI · AI Application and Algorithm Intern</span><span class="meta">Oct 2025–Mar 2026</span></div><p>Worked on virtual-human latency, multimodal testing, and LoRA fine-tuning workflows.</p></div>
     </section>
 
-    <!-- Contact -->
-    <section class="card">
-      <h2>Contact</h2>
-      <p>Email: 15105510419@163.com</p>
-      <p>Phone: +86 15105510419</p>
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <div class="entry"><div class="entry-title"><span>University of California San Diego</span><span class="meta">Expected Dec 2027</span></div><p>M.S. Electrical and Computer Engineering, Signal and Image Processing · GPA 4.00/4.00</p></div>
+      <div class="entry"><div class="entry-title"><span>University of Electronic Science and Technology of China</span><span class="meta">Jun 2025</span></div><p>B.Eng. Communication Engineering · Glasgow College Joint Program</p></div>
     </section>
 
-    <footer>
-      © <span id="year"></span> Qinghua Sun · Portfolio
-    </footer>
-
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <section aria-labelledby="skills">
+      <h2 id="skills">Core tools</h2>
+      <div class="skills"><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">Go</span><span class="tag">PyTorch</span><span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Docker</span></div>
+    </section>
+    <footer>© 2026 Qinghua Sun · <a href="mailto:qis010@ucsd.edu">qis010@ucsd.edu</a></footer>
+  </main>
 </body>
 </html>
-
